@@ -1,0 +1,78 @@
+{%load static%}
+<html>
+<head>
+<title>Predictpage</title>
+<link rel="stylesheet" href="{%static 'predict.css'%}">
+</head>
+<body>
+<h1>Welcome to Prediction Page</h1>
+<div id="box">
+<form action="result" method="get">
+<p>
+<label for="area">Area:</label>
+<input type="text" required name="area">
+<label for="bedrooms">Bedrooms:</label>
+<input type="text" requied name="bedrooms">
+</p>
+<p>
+<label for="bathrooms">Bathrooms:</label>
+<input type="text" required name="bathrooms">
+<label for="basement">Basement:</label>
+<select id="basement" required name="basement">
+  <option value="yes">yes</option>
+  <option value="no">no</option>
+ </select>
+</p>
+<p>
+<label for="stories">Stories:</label>
+<input type="text" required name="stories">
+<label for="mainroad">Mainroad:</label>
+<select id="mainroad" required name="mainroad">
+  <option value="yes">yes</option>
+  <option value="no">no</option>
+ </select>
+</p>
+<p>
+<label for="guest_room">Guest room:</label>
+<select id="guest_room" required name="guest_room">
+  <option value="yes">yes</option>
+  <option value="no">no</option>
+ </select>
+<label for:"hotwatering">Hotwatering:</label>
+<select id="hotwatering" required name="hotwatering">
+  <option value="yes">yes</option>
+  <option value="no">no</option>
+ </select>
+</p>
+<p>
+<label for="furnishing_status">Furnishing Status:</label>
+<select id="furnishing_status" required name="furnishing_status">
+  <option value="semi-furnished">semi-furnished</option>
+  <option value="furnished">furnished</option>
+  <option value="unfurnished">unfurnished</option>
+ </select>
+<label for="airconditioning">Airconditioning:</label>
+<select id="airconditioning" required name="airconditioning">
+  <option value="yes">yes</option>
+  <option value="no">no</option>
+ </select>
+</p>
+<p>
+<label for="parking">parking:</label>
+<input type="text" required name="parking">
+<label for="prefarea">prefarea:</label>
+<select id="prefarea" required name="prefarea">
+  <option value="yes">yes</option>
+  <option value="no">no</option>
+ </select>
+</p>
+<p>
+<input type="submit" value="predict">
+</p>
+</form>
+<div class="row">
+ <p>The predicted price is:{{result}}</p>
+</div>
+</div>
+</body>
+</html>
